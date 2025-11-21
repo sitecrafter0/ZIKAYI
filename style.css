@@ -498,3 +498,6 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid var(--fo
         transform: translateY(-10px) rotate(-45deg);
     }
 }
+.nav-links.open {
+    right: 0;
+}
