@@ -1,171 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ZIKAYI Trading (Pty) Ltd – Premium construction services including bricklaying, roofing, plastering, painting, paving, plumbing and full building solutions.">
-    <title>ZIKAYI Trading (Pty) Ltd</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zikayi Trading (Pty) Ltd – Premium Construction Services</title>
+
+    <meta name="description" content="Zikayi Trading (Pty) Ltd delivers high-quality construction, renovations, roofing, paving, plumbing, plastering, tiling, glazing, bricklaying and full building solutions." />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header id="header">
-        <div class="container nav-container">
-            <h1 class="logo reveal fade-up">ZIKAYI <span>Trading (Pty) Ltd</span></h1>
+<!-- HEADER -->
+<header class="header">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">ZIKAYI <span>TRADING</span></a>
 
-            <nav class="nav">
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
+        <nav id="navMenu" class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
 
-            <div class="hamburger" id="hamburger">
-                <span></span><span></span><span></span>
-            </div>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
         </div>
-    </header>
 
+        <div class="theme-toggle" id="themeToggle">
+            <i class="sun">☀️</i>
+            <i class="moon">🌙</i>
+        </div>
+    </div>
+</header>
 
-    <!-- HERO VIDEO SECTION -->
-  <section class="hero">
+<!-- HERO -->
+<section class="hero premium-hero">
     <video autoplay muted loop playsinline class="hero-video">
-        <source src="6474277-uhd_2160_3840_25fps.mp4" type="video/mp4" />
+        <source src="media/hero.mp4" type="video/mp4">
     </video>
 
     <div class="hero-overlay"></div>
 
-    <div class="hero-content container">
-        <h1>Building Excellence, One Brick at a Time</h1>
-        <p>
-            ZIKAYI Trading (Pty) Ltd delivers trusted, top-tier construction
-            services built on precision, integrity, and craftsmanship.
-        </p>
-        <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+    <div class="hero-content container" data-animate="fade-up">
+        <h1>We Build Stronger Futures.</h1>
+        <p>Premium construction, renovations and building solutions across South Africa.</p>
+
+        <div class="hero-buttons">
+            <a href="contact.html" class="btn-primary">Request a Quote</a>
+            <a href="https://wa.me/27xxxxxxxxx" class="btn-secondary">WhatsApp</a>
+        </div>
     </div>
 </section>
 
+<!-- FEATURE STRIP -->
+<section class="feature-strip">
+    <div class="container feature-grid">
+        <div class="feature-box" data-animate="fade-up">
+            <h3>10+ Years Experience</h3>
+            <p>Industry professionals you can trust.</p>
+        </div>
 
+        <div class="feature-box" data-animate="fade-up" data-delay="150">
+            <h3>Certified Team</h3>
+            <p>Guaranteed workmanship from trained experts.</p>
+        </div>
 
-    <!-- TRUST BADGES / STATS -->
-    <section class="stats-section">
-        <div class="container stats-grid">
+        <div class="feature-box" data-animate="fade-up" data-delay="300">
+            <h3>Nationwide Service</h3>
+            <p>We deliver anywhere in South Africa.</p>
+        </div>
+    </div>
+</section>
 
-            <div class="stat-box reveal fade-up">
-                <h3>10+ Years</h3>
-                <p>Industry Experience</p>
+<!-- SERVICES GRID -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title" data-animate="fade-up">Our Services</h2>
+
+        <div class="service-grid premium-grid">
+
+            <div class="service-card" data-animate="fade-up">
+                <h3>Bricklaying</h3>
+                <p>Strong, reliable and precise brickwork for all structures.</p>
             </div>
 
-            <div class="stat-box reveal fade-up delay-1">
-                <h3>200+ Projects</h3>
-                <p>Completed Successfully</p>
+            <div class="service-card" data-animate="fade-up" data-delay="100">
+                <h3>Plastering</h3>
+                <p>Smooth, durable interior & exterior plastering.</p>
             </div>
 
-            <div class="stat-box reveal fade-up delay-2">
-                <h3>100% Quality</h3>
-                <p>Craftsmanship Guarantee</p>
+            <div class="service-card" data-animate="fade-up" data-delay="200">
+                <h3>Roofing</h3>
+                <p>Waterproofing, repairs & professional installations.</p>
             </div>
 
-            <div class="stat-box reveal fade-up delay-3">
-                <h3>Trusted Team</h3>
-                <p>Fully Certified Professionals</p>
+            <div class="service-card" data-animate="fade-up" data-delay="300">
+                <h3>Painting</h3>
+                <p>High-quality painting that lasts for years.</p>
+            </div>
+
+            <div class="service-card" data-animate="fade-up" data-delay="400">
+                <h3>Tiling</h3>
+                <p>Floor & wall tiling with precision alignment.</p>
+            </div>
+
+            <div class="service-card" data-animate="fade-up" data-delay="500">
+                <h3>Ceilings</h3>
+                <p>PVC, suspended ceilings & detailed finishing.</p>
+            </div>
+
+            <div class="service-card" data-animate="fade-up" data-delay="600">
+                <h3>Plumbing</h3>
+                <p>General plumbing, installations & repairs.</p>
+            </div>
+
+            <div class="service-card" data-animate="fade-up" data-delay="700">
+                <h3>Paving</h3>
+                <p>Durable driveways, pathways & decorative paving.</p>
             </div>
 
         </div>
-    </section>
+    </div>
+</section>
 
+<!-- WHY CHOOSE US -->
+<section class="why-us premium-why">
+    <div class="container">
+        <h2 class="section-title" data-animate="fade-up">Why Choose Us?</h2>
 
-    <!-- SERVICES PREVIEW -->
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title reveal fade-up">Our Core Construction Services</h2>
-            <p class="section-subtitle reveal fade-up delay-1">
-                Delivering reliable, high-standard building solutions tailored to your project.
-            </p>
-
-            <div class="services-grid">
-
-                <div class="service-card reveal fade-up delay-1">
-                    <h3>Bricklaying</h3>
-                    <p>Precision-built walls and structures that ensure lasting strength.</p>
-                </div>
-
-                <div class="service-card reveal fade-up delay-2">
-                    <h3>Roofing</h3>
-                    <p>Durable, weather-resistant roofing installations.</p>
-                </div>
-
-                <div class="service-card reveal fade-up delay-3">
-                    <h3>Painting</h3>
-                    <p>Professional interior & exterior finishing with premium paints.</p>
-                </div>
-
-                <div class="service-card reveal fade-up delay-4">
-                    <h3>Plastering</h3>
-                    <p>Perfect, smooth wall finishing done right the first time.</p>
-                </div>
-
+        <div class="why-grid">
+            <div class="why-card" data-animate="fade-right">
+                <h3>Reliable Workmanship</h3>
+                <p>We deliver work we stand behind — every project, every time.</p>
             </div>
 
-            <div class="center-btn reveal fade-up delay-4">
-                <a href="services.html" class="btn-secondary">Explore All Services</a>
+            <div class="why-card" data-animate="fade-right" data-delay="150">
+                <h3>Premium Quality</h3>
+                <p>Top-grade materials and advanced construction techniques.</p>
             </div>
 
-        </div>
-    </section>
-
-
-    <!-- WHY CHOOSE US -->
-    <section class="why-us">
-        <div class="container">
-
-            <h2 class="section-title reveal fade-up">Why Clients Trust ZIKAYI</h2>
-
-            <div class="why-grid">
-
-                <div class="why-card reveal fade-up delay-1">
-                    <h3>Quality Workmanship</h3>
-                    <p>We build with precision, ensuring every detail meets the highest standards.</p>
-                </div>
-
-                <div class="why-card reveal fade-up delay-2">
-                    <h3>Reliable & Transparent</h3>
-                    <p>Clear communication and always delivering what we promise — on time.</p>
-                </div>
-
-                <div class="why-card reveal fade-up delay-3">
-                    <h3>Custom Building Solutions</h3>
-                    <p>Every project is customised to match your vision and functional needs.</p>
-                </div>
-
+            <div class="why-card" data-animate="fade-right" data-delay="300">
+                <h3>Affordable Pricing</h3>
+                <p>High-end work at competitive prices you can trust.</p>
             </div>
 
+            <div class="why-card" data-animate="fade-right" data-delay="450">
+                <h3>Fast Project Delivery</h3>
+                <p>We complete all projects on schedule — no delays.</p>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
+<!-- CTA SECTION -->
+<section class="cta-section" data-animate="fade-up">
+    <div class="container cta-box">
+        <h2>Ready to Start Your Project?</h2>
+        <p>Let our expert team bring your vision to life with quality you can trust.</p>
 
-    <!-- CALL TO ACTION -->
-    <section class="cta-section">
-        <div class="container cta-box reveal fade-up">
+        <a href="contact.html" class="btn-primary cta-btn">Contact Us Today</a>
+    </div>
+</section>
 
-            <h2>Ready to Start Your Next Project?</h2>
-            <p>Let’s build something strong, beautiful and long-lasting together.</p>
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-container">
 
-            <a href="contact.html" class="btn-primary">Contact Us Today</a>
-
+        <div class="footer-section">
+            <h3>ZIKAYI TRADING</h3>
+            <p>Premium building, renovations & construction you can rely on.</p>
         </div>
-    </section>
 
+        <div class="footer-section">
+            <h4>Navigation</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2025 ZIKAYI Trading (Pty) Ltd. All rights reserved.</p>
-    </footer>
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>Phone: 0xx xxx xxxx</p>
+            <p>Email: info@zikayi.co.za</p>
+        </div>
+    </div>
 
-    <script src="main.js"></script>
+    <p class="footer-copy">© 2025 Zikayi Trading (Pty) Ltd. All rights reserved.</p>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>

@@ -1,122 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us – ZIKAYI Trading (Pty) Ltd</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us – Zikayi Trading (Pty) Ltd</title>
 
-    <meta name="description" content="Contact ZIKAYI Trading (Pty) Ltd for construction services, quotations, and project consultations. Fast, reliable communication.">
-    <meta name="keywords" content="ZIKAYI Trading, construction, building, contact, quotations, services">
+    <meta name="description" content="Contact Zikayi Trading (Pty) Ltd for expert construction services including bricklaying, roofing, plastering, painting, paving and plumbing services." />
+    <link rel="canonical" href="https://your-domain.co.za/contact.html" />
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">ZIKAYI <span>Trading (Pty) Ltd</span></a>
+<!-- HEADER -->
+<header class="header">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">ZIKAYI <span>TRADING</span></a>
 
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a class="active" href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+        <nav id="navMenu" class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
 
-            <div class="hamburger">
-                <span></span><span></span><span></span>
-            </div>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
         </div>
-    </header>
 
-
-    <!-- HERO -->
-    <section class="premium-contact-hero">
-        <div class="contact-hero-overlay"></div>
-
-        <div class="contact-hero-content">
-            <h1 data-animate="fade-up">Let’s Bring Your Vision to Life</h1>
-            <p data-animate="fade-up" data-delay="200">Premium construction. Personal service. Exceptional results.</p>
-            <a href="#contactform" class="btn-primary" data-animate="fade-up" data-delay="400">
-                Start Your Project
-            </a>
+        <div class="theme-toggle" id="themeToggle">
+            <i class="sun">☀️</i>
+            <i class="moon">🌙</i>
         </div>
-    </section>
+    </div>
+</header>
 
+<!-- HERO -->
+<!-- ABOUT HERO (styled like the homepage hero but smaller) -->
+<section class="about-hero section">
+    <div class="container">
+        <div class="cta-box reveal-up">
+            <h1 class="page-title" style="margin-bottom:8px;">Contact Us</h1>
+            <p class="page-subtitle" style="font-size:1.05rem;">
+                lets start.
+            </p>
+        </div>
+    </div>
+</section>
 
-    <!-- CONTACT SECTION -->
-    <section class="premium-contact-section">
-        <div class="container contact-split">
-
-            <!-- INFO SIDE -->
-           <div class="contact-quick-links">
-    <a href="https://wa.me/27721234567" target="_blank" class="contact-btn whatsapp">
-        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+<div class="contact-quick-actions">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/27XXXXXXXXX" target="_blank" class="contact-action whatsapp">
+        <svg width="20" height="20" viewBox="0 0 32 32">
+            <path fill="currentColor" d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.7 2 6.7L4 29l7.5-2c1.9 1 4.1 1.5 6.5 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.9c-2 0-3.9-.5-5.6-1.6l-.4-.2-4.5 1.2 1.2-4.4-.3-.5c-1-1.7-1.5-3.5-1.5-5.4 0-5.7 4.6-10.3 10.3-10.3S26.3 8.3 26.3 14 21.7 24.9 16 24.9zm5.2-9.1c-.3-.1-1.9-.9-2.2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.4.1-.1.1-.2.2-.3s.1-.2.2-.3c.1-.1.1-.3 0-.4l-1-2.4c-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-.9.4-.4.5-1.2 1.2-1.2 3s1.2 3.4 1.4 3.6c.2.2 2.3 3.5 5.7 4.9.8.3 1.5.6 2 .7.8.3 1.6.3 2.2.2.7-.1 1.9-.8 2.2-1.5s.3-1.3.2-1.5c-.2-.1-.5-.2-.7-.3z"/>
+        </svg>
+        WhatsApp
     </a>
 
-    <a href="tel:+27721234567" class="contact-btn phone">
-        <i class="fa-solid fa-phone"></i> Call
+    <!-- Phone -->
+    <a href="tel:0XXXXXXXXX" class="contact-action phone">
+        <svg width="20" height="20" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M6.6 10.8c1.2 2.4 3.2 4.4 5.6 5.6l1.9-1.9c.3-.3.7-.4 1.1-.3 1.2.4 2.6.6 4 .6.6 0 1 .4 1 1v3.3c0 .6-.4 1-1 1C10.6 21.1 2.9 13.4 2.9 3.9c0-.6.4-1 1-1H7.2c.6 0 1 .4 1 1 0 1.4.2 2.7.6 4 0 .4 0 .8-.3 1.1l-1.9 1.8z"/>
+        </svg>
+        Call
     </a>
 
-    <a href="mailto:info@zikayi.co.za" class="contact-btn email">
-        <i class="fa-solid fa-envelope"></i> Email
+    <!-- Email -->
+    <a href="mailto:yourmail@example.com" class="contact-action email">
+        <svg width="20" height="20" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12 13.5 1.5 6v12h21V6L12 13.5zm0-2.3L22.5 4h-21L12 11.2z"/>
+        </svg>
+        Email
     </a>
 </div>
 
+
+        <!-- RIGHT SIDE: FORM -->
+        <form id="contactform" class="contact-form reveal-up">
+            <h2>Send Us a Message</h2>
+
+            <div class="form-row">
+                <input type="text" name="name" placeholder="Full Name" required>
             </div>
 
-
-            <!-- FORM SIDE -->
-            <div class="contact-form-side" data-animate="fade-right">
-                <h2>Send Us a Message</h2>
-                <p class="info-sub">Tell us what you need and we’ll get back to you fast.</p>
-
-                <form class="contact-form-advanced">
-
-    <h3>Send Us a Message</h3>
-
-    <div class="form-row-advanced">
-        <div class="form-group-floating">
-            <input type="text" placeholder=" " required>
-            <label>First Name</label>
-        </div>
-
-        <div class="form-group-floating">
-            <input type="text" placeholder=" " required>
-            <label>Last Name</label>
-        </div>
-    </div>
-
-    <div class="form-group-floating">
-        <input type="email" placeholder=" " required>
-        <label>Email Address</label>
-    </div>
-
-    <div class="form-group-floating">
-        <textarea placeholder=" "></textarea>
-        <label>Your Message</label>
-    </div>
-
-    <button type="submit" class="btn-primary">Send Message</button>
-</form>
-
+            <div class="form-row">
+                <input type="email" name="email" placeholder="Email Address" required>
             </div>
 
+            <div class="form-row">
+                <input type="text" name="phone" placeholder="Phone Number">
+            </div>
+
+            <div class="form-row">
+                <select name="service">
+                    <option value="">Select Service</option>
+                    <option value="Bricklaying">Bricklaying</option>
+                    <option value="Roofing">Roofing</option>
+                    <option value="Plastering">Plastering</option>
+                    <option value="Painting">Painting</option>
+                    <option value="Ceilings">Ceilings</option>
+                    <option value="Tiling">Tiling</option>
+                    <option value="Plumbing">Plumbing</option>
+                    <option value="Paving">Paving</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <textarea name="message" placeholder="Your Message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">Send Message</button>
+
+            <div class="form-message"></div>
+        </form>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-container">
+
+        <div class="footer-section">
+            <h3>ZIKAYI TRADING (PTY) LTD</h3>
+            <p>Your trusted partner for construction and building solutions.</p>
         </div>
-    </section>
 
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </div>
 
-   
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>Phone: 0XX XXX XXXX</p>
+            <p>Email: info@zikayi.co.za</p>
+        </div>
 
+    </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2025 ZIKAYI Trading (Pty) Ltd. All rights reserved.</p>
-    </footer>
+    <p class="footer-copy">© 2025 Zikayi Trading (Pty) Ltd. All rights reserved.</p>
+</footer>
 
-    <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

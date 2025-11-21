@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio – ZIKAYI Trading (Pty) Ltd</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Work – Zikayi Trading (Pty) Ltd</title>
+
+    <meta name="description" content="View Zikayi Trading (Pty) Ltd’s completed construction projects including bricklaying, roofing, plastering, painting, paving, ceilings and plumbing work." />
+    <link rel="canonical" href="https://your-domain.co.za/portfolio.html" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- =========================
-     HEADER
-========================== -->
-<header id="header">
+<!-- HEADER -->
+<header class="header">
     <div class="container nav-container">
-        <h1 class="logo">ZIKAYI <span>Trading (Pty) Ltd</span></h1>
+        <a href="index.html" class="logo">ZIKAYI <span>TRADING</span></a>
 
-        <nav class="nav">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a class="active" href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
+        <nav id="navMenu" class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html" class="active">Portfolio</a>
+            <a href="contact.html">Contact</a>
         </nav>
 
         <div class="hamburger" id="hamburger">
@@ -31,111 +35,150 @@
     </div>
 </header>
 
-
-<!-- =========================
-     HERO
-========================== -->
-<section class="portfolio-hero">
-    <div class="portfolio-overlay"></div>
-    <div class="portfolio-hero-content">
-        <h1 class="reveal">Our Portfolio</h1>
-        <p class="reveal delay-1">A showcase of the craftsmanship and excellence we’re known for.</p>
-    </div>
-</section>
-
-
-<!-- =========================
-     CATEGORY FILTER (STATIC)
-========================== -->
-<section class="portfolio-categories">
+<!-- ABOUT HERO (styled like the homepage hero but smaller) -->
+<section class="about-hero section">
     <div class="container">
-        <ul class="category-list reveal">
-            <li class="active">All</li>
-            <li>Construction</li>
-            <li>Renovation</li>
-            <li>Painting</li>
-            <li>Roofing</li>
-            <li>Paving</li>
-        </ul>
+        <div class="cta-box reveal-up">
+            <h1 class="page-title" style="margin-bottom:8px;">Our Portfolio</h1>
+            <p class="page-subtitle" style="font-size:1.05rem;">
+                Our high quality jobs
+            </p>
+        </div>
     </div>
 </section>
 
+<!-- FILTERS -->
+<section class="portfolio-filter-section container reveal-up">
+    <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="bricklaying">Bricklaying</button>
+        <button class="filter-btn" data-filter="roofing">Roofing</button>
+        <button class="filter-btn" data-filter="plastering">Plastering</button>
+        <button class="filter-btn" data-filter="painting">Painting</button>
+        <button class="filter-btn" data-filter="paving">Paving</button>
+        <button class="filter-btn" data-filter="ceilings">Ceilings</button>
+        <button class="filter-btn" data-filter="plumbing">Plumbing</button>
+    </div>
+</section>
 
-<!-- =========================
-     PORTFOLIO GRID
-========================== -->
-<section class="portfolio-section">
-    <div class="container portfolio-grid">
+<!-- PORTFOLIO GALLERY -->
+<section class="portfolio-gallery container">
+    <div class="gallery-grid">
 
-        <!-- 1 -->
-        <div class="project-card reveal" data-title="Modern Home Build" data-desc="A complete residential build featuring modern architectural lines and premium finishes." data-img="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
-            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=900&q=60" alt="Modern Home Build">
-            <div class="project-overlay">
-                <h3>Modern Home Build</h3>
+        <!-- EXAMPLE CARDS -->
+        <div class="gallery-item reveal-up" data-category="bricklaying">
+            <div class="gallery-card">
+                <img src="media/brick1.jpg" alt="Bricklaying construction project">
+                <div class="gallery-info">
+                    <h3>Bricklaying Project</h3>
+                    <p>Strong, precise brickwork for a residential building.</p>
+                </div>
             </div>
         </div>
 
-        <!-- 2 -->
-        <div class="project-card reveal delay-1" data-title="Interior Renovation" data-desc="Full renovation including drywall, ceilings, plastering and luxury painting." data-img="https://images.unsplash.com/photo-1600607688969-a8f38fba3e5f">
-            <img src="https://images.unsplash.com/photo-1600607688969-a8f38fba3e5f?auto=format&fit=crop&w=900&q=60" alt="Interior Renovation">
-            <div class="project-overlay">
-                <h3>Interior Renovation</h3>
+        <div class="gallery-item reveal-up" data-category="roofing">
+            <div class="gallery-card">
+                <img src="media/roof1.jpg" alt="Roofing installation project">
+                <div class="gallery-info">
+                    <h3>Roofing Installation</h3>
+                    <p>Durable, weather-resistant roofing installation.</p>
+                </div>
             </div>
         </div>
 
-        <!-- 3 -->
-        <div class="project-card reveal delay-2" data-title="Roof Replacement" data-desc="High-quality roofing replacement using durable and weather-resistant materials." data-img="https://images.unsplash.com/photo-1508873535684-277a3cbcc4e5">
-            <img src="https://images.unsplash.com/photo-1508873535684-277a3cbcc4e5?auto=format&fit=crop&w=900&q=60" alt="Roof Replacement">
-            <div class="project-overlay">
-                <h3>Roof Replacement</h3>
+        <div class="gallery-item reveal-up" data-category="plastering">
+            <div class="gallery-card">
+                <img src="media/plaster1.jpg" alt="Plastering work">
+                <div class="gallery-info">
+                    <h3>Plastering Work</h3>
+                    <p>Smooth, clean and long-lasting interior finishing.</p>
+                </div>
             </div>
         </div>
 
-        <!-- 4 -->
-        <div class="project-card reveal" data-title="Paving Project" data-desc="Precision brick paving for driveways and outdoor spaces." data-img="https://images.unsplash.com/photo-1581092335120-132d2c2b1db9">
-            <img src="https://images.unsplash.com/photo-1581092335120-132d2c2b1db9?auto=format&fit=crop&w=900&q=60" alt="Paving Project">
-            <div class="project-overlay">
-                <h3>Paving Project</h3>
+        <div class="gallery-item reveal-up" data-category="painting">
+            <div class="gallery-card">
+                <img src="media/paint1.jpg" alt="Painting project">
+                <div class="gallery-info">
+                    <h3>Exterior Painting</h3>
+                    <p>Premium paint applied with precision and care.</p>
+                </div>
             </div>
         </div>
 
-        <!-- 5 -->
-        <div class="project-card reveal delay-1" data-title="Office Painting" data-desc="Professional commercial painting for modern interiors." data-img="https://images.unsplash.com/photo-1587502536595-3e56075d1a5b">
-            <img src="https://images.unsplash.com/photo-1587502536595-3e56075d1a5b?auto=format&fit=crop&w=900&q=60" alt="Office Painting">
-            <div class="project-overlay">
-                <h3>Office Painting</h3>
+        <div class="gallery-item reveal-up" data-category="paving">
+            <div class="gallery-card">
+                <img src="media/paving1.jpg" alt="Paving project">
+                <div class="gallery-info">
+                    <h3>Paving Project</h3>
+                    <p>Durable, neat and level paving installation.</p>
+                </div>
             </div>
         </div>
 
-        <!-- 6 -->
-        <div class="project-card reveal delay-2" data-title="Bricklaying Work" data-desc="High-precision brick structures built with long-term durability." data-img="https://images.unsplash.com/photo-1600585154800-0f3ce0245780">
-            <img src="https://images.unsplash.com/photo-1600585154800-0f3ce0245780?auto=format&fit=crop&w=900&q=60" alt="Bricklaying Work">
-            <div class="project-overlay">
-                <h3>Bricklaying Work</h3>
+        <div class="gallery-item reveal-up" data-category="ceilings">
+            <div class="gallery-card">
+                <img src="media/ceiling1.jpg" alt="Ceiling installation">
+                <div class="gallery-info">
+                    <h3>Ceiling Installation</h3>
+                    <p>High-quality ceiling board fitting with a clean finish.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-item reveal-up" data-category="plumbing">
+            <div class="gallery-card">
+                <img src="media/plumbing1.jpg" alt="Plumbing installation">
+                <div class="gallery-info">
+                    <h3>Plumbing Work</h3>
+                    <p>Leak-free, professional plumbing solutions.</p>
+                </div>
             </div>
         </div>
 
     </div>
 </section>
 
-
-<!-- =========================
-     MODAL POPUP
-========================== -->
-<div class="project-modal" id="projectModal">
-    <div class="modal-content">
-        <span class="modal-close">&times;</span>
-
-        <img id="modalImg" src="" alt="">
-        <h2 id="modalTitle"></h2>
-        <p id="modalDesc"></p>
+<!-- CTA -->
+<section class="cta-section reveal-up">
+    <div class="container cta-box">
+        <h2>Let’s Build Something Great</h2>
+        <p>Interested in starting your project? Get a free quote today.</p>
+        <a href="contact.html" class="btn-primary">Contact Us</a>
     </div>
-</div>
-
+</section>
 
 <!-- FOOTER -->
-<footer>
-    <p>© 2025 ZIKAYI Trading (Pty) Ltd. All rights reserved.</p>
+<footer class="footer">
+    <div class="container footer-container">
+
+        <div class="footer-section">
+            <h3>ZIKAYI TRADING (PTY) LTD</h3>
+            <p>Professional, reliable and trusted construction services.</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>Phone: 0xx xxx xxxx</p>
+            <p>Email: info@zikayi.co.za</p>
+        </div>
+
+        <div class="theme-toggle" id="themeToggle">
+            <i class="sun">☀️</i>
+            <i class="moon">🌙</i>
+        </div>
+
+    </div>
+
+    <p class="footer-copy">© 2025 Zikayi Trading (Pty) Ltd. All rights reserved.</p>
 </footer>
 
 <script src="main.js"></script>
