@@ -1,0 +1,168 @@
+/* style.css
+   Clean modern styles for ZIKAYI Trading
+   Brand colors: green (#1b8a3e), black (#111), white (#fff)
+*/
+:root{
+  --green: #1b8a3e;
+  --dark: #111111;
+  --muted: #6b7280;
+  --bg: #f7f9fb;
+  --card: #ffffff;
+  --max-width: 1200px;
+  --radius: 12px;
+  --shadow: 0 6px 20px rgba(16,24,40,0.08);
+  --ease: cubic-bezier(.2,.9,.2,1);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin:0;
+  color:var(--dark);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.45;
+  -webkit-text-size-adjust:100%;
+}
+
+/* Container */
+.container{
+  width:92%;
+  max-width:var(--max-width);
+  margin:0 auto;
+}
+
+/* Header */
+.site-header{
+  background:transparent;
+  position:sticky;
+  top:0;
+  z-index:60;
+  transition:all .25s var(--ease);
+}
+.site-header .header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 0;
+}
+.logo img{height:42px; display:block}
+
+/* Nav */
+.main-nav{position:relative}
+.nav-toggle{
+  display:none;
+  background:none;
+  border:1px solid rgba(0,0,0,0.06);
+  padding:8px 10px;
+  border-radius:8px;
+}
+.nav-list{
+  list-style:none;
+  display:flex;
+  gap:18px;
+  align-items:center;
+  margin:0;
+  padding:0;
+}
+.nav-list a{
+  text-decoration:none;
+  color:var(--dark);
+  padding:8px 12px;
+  border-radius:8px;
+}
+.nav-list a.active{font-weight:600; color:var(--green)}
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  padding:10px 16px;
+  border-radius:10px;
+  border:0;
+  cursor:pointer;
+  font-weight:600;
+}
+.btn--primary{background:var(--green); color:white; box-shadow:var(--shadow)}
+.btn--accent{background:var(--dark); color:white}
+.btn--ghost{background:transparent; border:1px solid rgba(0,0,0,0.06)}
+
+/* HERO */
+.hero{
+  padding:36px 0;
+  background:linear-gradient(180deg, rgba(27,138,62,0.06) 0%, rgba(255,255,255,0) 100%);
+  border-bottom:1px solid rgba(16,24,40,0.03);
+}
+.hero-inner{display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:center; padding:24px 0}
+.hero-video{width:100%; height:320px; object-fit:cover; border-radius:14px; box-shadow:var(--shadow)}
+.hero-copy h1{font-size:clamp(1.6rem, 2.4vw, 2.4rem); margin:0 0 12px}
+.lead{color:var(--muted); font-size:1rem; margin-bottom:16px}
+.hero-ctas{display:flex; gap:10px; margin-bottom:12px}
+.hero-highlights{list-style:none; display:flex; gap:14px; color:var(--muted); font-size:0.9rem}
+.hero-highlights li strong{color:var(--dark); margin-right:6px}
+
+/* Services */
+.services{padding:36px 0}
+.section-header h2{margin:0 0 8px}
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+  margin-top:18px;
+}
+.service-card{
+  background:var(--card);
+  padding:18px;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+  transition:transform .28s var(--ease);
+}
+.service-card:hover{transform:translateY(-6px)}
+
+/* Portfolio preview */
+.portfolio-preview{padding:36px 0}
+.portfolio-grid{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.portfolio-card{background:var(--card); border-radius:12px; overflow:hidden; box-shadow:var(--shadow)}
+.portfolio-card img{height:160px; object-fit:cover}
+
+/* Why section */
+.why{padding:36px 0}
+.why-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:center}
+.why-visual img{border-radius:12px; box-shadow:var(--shadow)}
+.why-copy ul{padding-left:18px}
+
+/* Footer */
+.site-footer{background:var(--dark); color:white; padding:28px 0 12px}
+.footer-inner{display:flex; gap:20px; justify-content:space-between; align-items:center}
+.footer-nav a{color:rgba(255,255,255,0.85); margin-right:12px; text-decoration:none}
+.site-footer img{height:40px}
+
+/* Contact layout */
+.contact-grid{display:grid; grid-template-columns:1fr 320px; gap:24px; padding:24px 0}
+.contact-form .form-row{margin-bottom:12px}
+.contact-form label{display:block; font-weight:600; font-size:0.9rem; margin-bottom:6px}
+.contact-form input, .contact-form textarea, .contact-form select{
+  width:100%; padding:10px; border-radius:8px; border:1px solid rgba(16,24,40,0.08);
+  background:white; font-size:0.95rem;
+}
+.form-message{margin-top:12px; font-weight:600; color:var(--green)}
+
+/* Utility */
+.center{text-align:center}
+.card{background:white; padding:16px; border-radius:12px; box-shadow:var(--shadow)}
+
+/* Portfolio page specifics */
+.portfolio-grid.full{grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px}
+.portfolio-card figcaption{padding:12px}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr; }
+  .why-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .nav-list{display:none}
+  .nav-toggle{display:inline-block}
+  .header-inner{gap:12px}
+}
+/* reveal animation */
+.reveal{transform:none; opacity:1; transition:opacity .6s var(--ease), transform .6s var(--ease)}
+.service-card, .portfolio-card, .card, .why-visual img { transform: translateY(16px); opacity:0 }

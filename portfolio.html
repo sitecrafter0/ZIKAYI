@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio – ZIKAYI Trading (Pty) Ltd</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================== -->
+<header id="header">
+    <div class="container nav-container">
+        <h1 class="logo">ZIKAYI <span>Trading (Pty) Ltd</span></h1>
+
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a class="active" href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</header>
+
+
+<!-- =========================
+     HERO
+========================== -->
+<section class="portfolio-hero">
+    <div class="portfolio-overlay"></div>
+    <div class="portfolio-hero-content">
+        <h1 class="reveal">Our Portfolio</h1>
+        <p class="reveal delay-1">A showcase of the craftsmanship and excellence we’re known for.</p>
+    </div>
+</section>
+
+
+<!-- =========================
+     CATEGORY FILTER (STATIC)
+========================== -->
+<section class="portfolio-categories">
+    <div class="container">
+        <ul class="category-list reveal">
+            <li class="active">All</li>
+            <li>Construction</li>
+            <li>Renovation</li>
+            <li>Painting</li>
+            <li>Roofing</li>
+            <li>Paving</li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- =========================
+     PORTFOLIO GRID
+========================== -->
+<section class="portfolio-section">
+    <div class="container portfolio-grid">
+
+        <!-- 1 -->
+        <div class="project-card reveal" data-title="Modern Home Build" data-desc="A complete residential build featuring modern architectural lines and premium finishes." data-img="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
+            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=900&q=60" alt="Modern Home Build">
+            <div class="project-overlay">
+                <h3>Modern Home Build</h3>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="project-card reveal delay-1" data-title="Interior Renovation" data-desc="Full renovation including drywall, ceilings, plastering and luxury painting." data-img="https://images.unsplash.com/photo-1600607688969-a8f38fba3e5f">
+            <img src="https://images.unsplash.com/photo-1600607688969-a8f38fba3e5f?auto=format&fit=crop&w=900&q=60" alt="Interior Renovation">
+            <div class="project-overlay">
+                <h3>Interior Renovation</h3>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="project-card reveal delay-2" data-title="Roof Replacement" data-desc="High-quality roofing replacement using durable and weather-resistant materials." data-img="https://images.unsplash.com/photo-1508873535684-277a3cbcc4e5">
+            <img src="https://images.unsplash.com/photo-1508873535684-277a3cbcc4e5?auto=format&fit=crop&w=900&q=60" alt="Roof Replacement">
+            <div class="project-overlay">
+                <h3>Roof Replacement</h3>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="project-card reveal" data-title="Paving Project" data-desc="Precision brick paving for driveways and outdoor spaces." data-img="https://images.unsplash.com/photo-1581092335120-132d2c2b1db9">
+            <img src="https://images.unsplash.com/photo-1581092335120-132d2c2b1db9?auto=format&fit=crop&w=900&q=60" alt="Paving Project">
+            <div class="project-overlay">
+                <h3>Paving Project</h3>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="project-card reveal delay-1" data-title="Office Painting" data-desc="Professional commercial painting for modern interiors." data-img="https://images.unsplash.com/photo-1587502536595-3e56075d1a5b">
+            <img src="https://images.unsplash.com/photo-1587502536595-3e56075d1a5b?auto=format&fit=crop&w=900&q=60" alt="Office Painting">
+            <div class="project-overlay">
+                <h3>Office Painting</h3>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="project-card reveal delay-2" data-title="Bricklaying Work" data-desc="High-precision brick structures built with long-term durability." data-img="https://images.unsplash.com/photo-1600585154800-0f3ce0245780">
+            <img src="https://images.unsplash.com/photo-1600585154800-0f3ce0245780?auto=format&fit=crop&w=900&q=60" alt="Bricklaying Work">
+            <div class="project-overlay">
+                <h3>Bricklaying Work</h3>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     MODAL POPUP
+========================== -->
+<div class="project-modal" id="projectModal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+
+        <img id="modalImg" src="" alt="">
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+    </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2025 ZIKAYI Trading (Pty) Ltd. All rights reserved.</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

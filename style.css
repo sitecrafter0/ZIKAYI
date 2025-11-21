@@ -1,0 +1,1253 @@
+/* --------------------------------------------------
+   ROOT VARIABLES
+-------------------------------------------------- */
+:root {
+    --green: #0da94f;
+    --green-dark: #0a7c3a;
+    --black: #111;
+    --white: #fff;
+    --gray: #f4f6f9;
+    --text-dark: #222;
+    --shadow: 0 8px 30px rgba(0,0,0,0.08);
+    --radius: 14px;
+    --transition: .3s ease;
+}
+
+/* --------------------------------------------------
+   GLOBAL STYLES
+-------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--gray);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+img, video {
+    width: 100%;
+    display: block;
+    border-radius: var(--radius);
+}
+
+.container {
+    width: 92%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------
+   HEADER
+-------------------------------------------------- */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 20px 0;
+    z-index: 999;
+    transition: var(--transition);
+}
+
+header.scrolled {
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+}
+
+header .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--green);
+}
+
+/* Mobile Menu */
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.menu-btn span {
+    width: 28px;
+    height: 3px;
+    background: var(--white);
+    transition: var(--transition);
+}
+
+.mobile-nav {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    background: var(--black);
+    padding: 80px 40px;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.mobile-nav.open {
+    right: 0;
+}
+
+.mobile-nav a {
+    color: var(--white);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    nav ul {
+        display: none;
+    }
+    .menu-btn {
+        display: flex;
+    }
+}
+
+/* --------------------------------------------------
+   HERO SECTION
+-------------------------------------------------- */
+.hero {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--white);
+    overflow: hidden;
+    padding-top: 90px;
+}
+
+.hero-video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 600px;
+    z-index: 5;
+    animation: fadeUp 1.3s ease forwards;
+}
+
+.hero-content h1 {
+    font-size: 3.4rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    margin: 18px 0 28px;
+    font-size: 1.2rem;
+    color: #f1f1f1;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--green);
+    color: var(--white);
+    padding: 14px 36px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: var(--green-dark);
+    transform: translateY(-3px);
+}
+
+/* --------------------------------------------------
+   SECTION DEFAULT
+-------------------------------------------------- */
+section {
+    padding: 90px 0;
+}
+
+section h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+/* --------------------------------------------------
+   SERVICES (HOME)
+-------------------------------------------------- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 28px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--green);
+}
+
+/* --------------------------------------------------
+   ABOUT US PAGE
+-------------------------------------------------- */
+.about-wrapper {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+/* MOBILE FIX */
+@media (max-width: 900px) {
+    .about-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --------------------------------------------------
+   PORTFOLIO GRID
+-------------------------------------------------- */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+}
+
+.portfolio-card {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+}
+
+.portfolio-card img {
+    height: 240px;
+    object-fit: cover;
+}
+
+.portfolio-card .info {
+    padding: 20px;
+}
+
+.portfolio-card .info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+/* --------------------------------------------------
+   CONTACT PAGE
+-------------------------------------------------- */
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-form {
+    background: var(--white);
+    padding: 35px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border-radius: var(--radius);
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form button {
+    background: var(--green);
+    color: var(--white);
+    border: none;
+    padding: 14px 36px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: var(--radius);
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+.contact-form button:hover {
+    background: var(--green-dark);
+}
+
+/* MOBILE FIX */
+@media (max-width: 900px) {
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+footer {
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 70px;
+    font-size: 1rem;
+}
+
+/* --------------------------------------------------
+   ANIMATIONS
+-------------------------------------------------- */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --------------------------------------------------
+   PREMIUM BUTTONS UPGRADE
+-------------------------------------------------- */
+
+.btn-primary,
+button,
+.contact-form button {
+    position: relative;
+    overflow: hidden;
+    padding: 14px 40px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--green), var(--green-dark));
+    color: var(--white);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    transition: 0.35s ease;
+}
+
+.btn-primary::before,
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 140%;
+    height: 100%;
+    background: rgba(255,255,255,0.25);
+    transform: skewX(-20deg);
+    transition: 0.5s ease;
+}
+
+.btn-primary:hover::before,
+button:hover::before {
+    left: 200%;
+}
+
+.btn-primary:hover,
+button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* --------------------------------------------------
+   SECTION SPACING UPGRADE
+-------------------------------------------------- */
+
+section {
+    padding: 100px 0;
+}
+
+section h2 {
+    font-size: 3rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+section h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: var(--green);
+    display: block;
+    margin: 14px auto 0;
+    border-radius: 14px;
+}
+
+/* --------------------------------------------------
+   TEXT PREMIUM UPGRADE
+-------------------------------------------------- */
+
+p {
+    font-size: 1.14rem;
+    line-height: 1.75;
+    color: #333;
+}
+
+/* Headings refinement */
+h1 {
+    font-size: 3.6rem;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+h3 {
+    font-size: 1.5rem !important;
+    font-weight: 700;
+}
+
+/* --------------------------------------------------
+   CARD UPGRADE (services, portfolio)
+-------------------------------------------------- */
+
+.service-card,
+.portfolio-card {
+    border-radius: 16px;
+    padding: 30px;
+    background: var(--white);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: 0.35s ease;
+}
+
+.service-card:hover,
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 14px 38px rgba(0,0,0,0.14);
+}
+
+.service-card h3 {
+    font-size: 1.35rem;
+    color: var(--green);
+    margin-bottom: 10px;
+}
+
+/* --------------------------------------------------
+   CONTACT FORM PREMIUM LOOK
+-------------------------------------------------- */
+
+.contact-form {
+    border-radius: 18px;
+    padding: 40px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 1.05rem;
+    transition: 0.25s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(13, 169, 79, 0.25);
+}
+
+/* --------------------------------------------------
+   HERO TEXT PREMIUM LOOK
+-------------------------------------------------- */
+
+.hero-content h1 {
+    text-shadow: 0 4px 22px rgba(0,0,0,0.45);
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    max-width: 550px;
+    color: #e4e4e4;
+}
+
+/* --------------------------------------------------
+   SMOOTH CARD GRID SPACING
+-------------------------------------------------- */
+
+.services-grid,
+.portfolio-grid {
+    gap: 35px;
+}
+
+/* --------------------------------------------------
+   FOOTER UPGRADE
+-------------------------------------------------- */
+
+footer {
+    padding: 50px 0;
+    font-size: 1.05rem;
+    letter-spacing: 0.4px;
+    border-top: 3px solid var(--green);
+}
+
+/* --------------------------------------------------
+   ANIMATION ENHANCEMENTS
+-------------------------------------------------- */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s cubic-bezier(.21,.77,.47,.99);
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ==================================================
+   ULTRA PREMIUM UPGRADE PACK
+   (Adds visuals, depth, gloss, micro-animations)
+================================================== */
+
+/* -------------------------------
+   MODERN GLASS NAVIGATION BAR
+--------------------------------*/
+header.scrolled {
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(15px) saturate(180%);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* -------------------------------
+   BRANDED GREEN GLOW ACCENTS
+--------------------------------*/
+:root {
+    --glow-green: 0 0 18px rgba(13,169,79,0.55);
+    --glow-green-strong: 0 0 28px rgba(13,169,79,0.8);
+}
+
+/* -------------------------------
+   BUTTON MEGA UPGRADE
+--------------------------------*/
+.btn-primary,
+button,
+.contact-form button {
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+    box-shadow: var(--glow-green);
+}
+
+.btn-primary:hover,
+button:hover {
+    box-shadow: var(--glow-green-strong);
+    filter: brightness(1.09);
+}
+
+/* Add smooth press effect */
+.btn-primary:active,
+button:active {
+    transform: scale(0.97);
+}
+
+/* -------------------------------
+   HOVER FLOAT ANIMATION
+--------------------------------*/
+.service-card:hover,
+.portfolio-card:hover {
+    animation: smoothFloat 0.5s ease forwards;
+}
+
+@keyframes smoothFloat {
+    from { transform: translateY(0); }
+    to { transform: translateY(-12px); }
+}
+
+/* -------------------------------
+   PREMIUM SHADOW SYSTEM
+--------------------------------*/
+.service-card,
+.portfolio-card,
+.contact-form {
+    box-shadow:
+        0 10px 20px rgba(0,0,0,0.08),
+        0 4px 12px rgba(0,0,0,0.05),
+        0 0 0 1px rgba(0,0,0,0.03);
+}
+
+/* -------------------------------
+   SECTION DELUXE TOP LINE
+--------------------------------*/
+section h2::before {
+    content: "";
+    width: 120px;
+    height: 6px;
+    background: linear-gradient(90deg, var(--green) 0%, var(--green-dark) 100%);
+    display: block;
+    margin: 0 auto 16px;
+    border-radius: 20px;
+    box-shadow: var(--glow-green);
+}
+
+/* -------------------------------
+   HERO VIDEO UPGRADE
+--------------------------------*/
+.hero::after {
+    /* Filmic vignette */
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(0,0,0,0) 50%, rgba(0,0,0,0.55) 100%);
+    pointer-events: none;
+}
+
+.hero-content {
+    animation: fadeUp 1.3s ease forwards, subtle-pop 1.8s ease;
+}
+
+@keyframes subtle-pop {
+    0% { transform: scale(0.93); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* -------------------------------
+   INPUT GLASS EFFECT
+--------------------------------*/
+.contact-form input,
+.contact-form textarea {
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(0,0,0,0.12);
+    transition: 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 4px rgba(13,169,79,0.25), var(--glow-green);
+}
+
+/* -------------------------------
+   PORTFOLIO IMAGE HOVER ZOOM
+--------------------------------*/
+.portfolio-card img {
+    transform: scale(1);
+    transition: 0.5s ease;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.08);
+}
+
+/* -------------------------------
+   RESPONSIVE TEXT TUNING
+--------------------------------*/
+@media (max-width: 700px) {
+    h1 { font-size: 2.7rem; }
+    h2 { font-size: 2.3rem; }
+    p { font-size: 1.05rem; }
+    .btn-primary { padding: 12px 32px; }
+}
+
+/* -------------------------------
+   MICRO-INTERACTIONS (subtle fade)
+--------------------------------*/
+a,
+button,
+.service-card,
+.portfolio-card,
+input,
+textarea {
+    transition: 0.28s cubic-bezier(.23, .94, .42, 1);
+}
+
+/* -------------------------------
+   LUXURY HOVER OUTLINES
+--------------------------------*/
+.service-card:hover,
+.portfolio-card:hover {
+    outline: 2px solid var(--green);
+    outline-offset: 4px;
+}
+
+/* -------------------------------
+   FOOTER LUXURY BAR
+--------------------------------*/
+footer {
+    background: var(--black);
+    position: relative;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 90%;
+    height: 4px;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, var(--green), var(--green-dark));
+    border-radius: 20px;
+    box-shadow: var(--glow-green);
+}
+/* ABOUT: Timeline / Story Flow */
+.about-story {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.about-story::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    background: linear-gradient(var(--green), var(--green-dark));
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    box-shadow: var(--glow-green);
+}
+
+.story-step {
+    width: 50%;
+    padding: 30px 40px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+    position: relative;
+}
+
+.story-step:nth-child(odd) {
+    float: left;
+    clear: both;
+    transform: translateX(-20px);
+}
+
+.story-step:nth-child(even) {
+    float: right;
+    clear: both;
+    transform: translateX(20px);
+}
+
+.story-step::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    width: 22px;
+    height: 22px;
+    background: var(--green);
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: var(--glow-green);
+}
+
+.story-step:nth-child(odd)::before {
+    right: -12px;
+}
+
+.story-step:nth-child(even)::before {
+    left: -12px;
+}
+
+.story-step h3 {
+    margin-bottom: 12px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+/* ABOUT: Value Cards */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    padding: 60px 0;
+}
+
+.value-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12), var(--glow-green);
+}
+
+.value-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.value-card p {
+    font-size: 1.05rem;
+    opacity: 0.85;
+}
+/* ABOUT: luxury soft gradient background */
+.about-section {
+    background: linear-gradient(135deg, #ffffff, #f6f7f9, #eef0f3);
+    padding: 80px 0;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+/* ============================================================
+   PREMIUM CONTACT PAGE UPGRADE (NON-DUPLICATING)
+   ------------------------------------------------------------
+   These styles ONLY target new classes usable on Contact page.
+===============================================================*/
+
+/* -------------------------------
+   Contact Page Wrapper
+--------------------------------*/
+.contact-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* -------------------------------
+   Contact Info Panel
+--------------------------------*/
+.contact-info-panel {
+    background: linear-gradient(135deg, #0e0e0e, #2b2b2b);
+    color: #fff;
+    padding: 50px 40px;
+    border-radius: 26px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.45);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-info-panel::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    background: rgba(13,169,79,0.18);
+    top: -160px;
+    right: -140px;
+    filter: blur(80px);
+    border-radius: 50%;
+}
+
+.contact-info-panel h2 {
+    margin-bottom: 20px;
+    font-size: 2.3rem;
+    color: var(--green);
+}
+
+.contact-info-panel p {
+    font-size: 1.1rem;
+    opacity: 0.85;
+    line-height: 1.7;
+}
+
+.contact-details {
+    margin-top: 30px;
+}
+
+.contact-details div {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.08rem;
+}
+
+.contact-details i {
+    font-size: 1.3rem;
+    color: var(--green);
+}
+
+
+/* -------------------------------
+   Contact Form Section Upgrade
+--------------------------------*/
+.contact-form-advanced {
+    background: #fff;
+    padding: 50px 40px;
+    border-radius: 26px;
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.07),
+        0 0 0 1px rgba(0,0,0,0.06);
+    position: relative;
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.contact-form-advanced h3 {
+    margin-bottom: 25px;
+    font-size: 2rem;
+    color: var(--black);
+}
+
+/* Input groups for superior spacing */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 22px;
+}
+
+.form-full {
+    margin-bottom: 22px;
+}
+
+.contact-form-advanced input,
+.contact-form-advanced textarea {
+    width: 100%;
+    padding: 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,0.09);
+    background: #fafafa;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.contact-form-advanced textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form-advanced input:focus,
+.contact-form-advanced textarea:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 4px rgba(13,169,79,0.18);
+}
+
+/* Submit button upgrade */
+.contact-form-advanced button {
+    width: 100%;
+    padding: 16px;
+    border-radius: 16px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+
+/* -------------------------------
+   Contact Map Box (optional)
+--------------------------------*/
+.map-box {
+    margin-top: 40px;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+
+/* -------------------------------
+   Responsive Behavior
+--------------------------------*/
+@media (max-width: 900px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        padding: 40px 0;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+/* ============================================================
+   NEXT-LEVEL CONTACT FORM UPGRADE (NON-DUPLICATING)
+===============================================================*/
+
+/* Outer Form Glow + 3D Style */
+.contact-form-advanced {
+    position: relative;
+    background: #ffffff;
+    padding: 55px 45px;
+    border-radius: 28px;
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.12),
+        0 0 0 2px rgba(13, 169, 79, 0.08);
+    overflow: hidden;
+    transform: translateZ(0);
+}
+
+/* Soft green radial glow behind form */
+.contact-form-advanced::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(13,169,79,0.22), transparent 70%);
+    filter: blur(60px);
+    pointer-events: none;
+}
+
+/* Section Title Upgrade */
+.contact-form-advanced h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #111;
+    letter-spacing: 0.3px;
+}
+
+/* Floating Label Group */
+.form-group-floating {
+    position: relative;
+    margin-bottom: 28px;
+}
+
+.form-group-floating input,
+.form-group-floating textarea {
+    width: 100%;
+    padding: 20px 18px 12px;
+    border-radius: 14px;
+    border: 2px solid transparent;
+    background: #f4f6f9;
+    font-size: 1.05rem;
+    transition: 0.35s ease;
+}
+
+.form-group-floating textarea {
+    height: 160px;
+    resize: none;
+}
+
+/* Floating label text */
+.form-group-floating label {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    color: #777;
+    font-size: 1.05rem;
+    pointer-events: none;
+    transition: 0.35s ease;
+}
+
+/* Focus Effect */
+.form-group-floating input:focus,
+.form-group-floating textarea:focus {
+    background: #fff;
+    border-color: var(--green);
+    box-shadow:
+        0 0 0 4px rgba(13,169,79,0.18),
+        0 6px 16px rgba(0,0,0,0.1);
+}
+
+/* Move label up on focus or when filled */
+.form-group-floating input:focus + label,
+.form-group-floating textarea:focus + label,
+.form-group-floating input:not(:placeholder-shown) + label,
+.form-group-floating textarea:not(:placeholder-shown) + label {
+    top: 12px;
+    font-size: 0.8rem;
+    color: var(--green);
+    transform: translateY(0);
+}
+
+/* Two-column name fields refined */
+.form-row-advanced {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 10px;
+}
+
+/* Submit button upgrade */
+.contact-form-advanced button {
+    width: 100%;
+    padding: 18px;
+    border-radius: 16px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, var(--green), var(--green-dark));
+    color: #fff;
+    box-shadow:
+        0 10px 30px rgba(13,169,79,0.25),
+        0 0 0 2px rgba(13,169,79,0.2);
+    transition: 0.35s ease;
+}
+
+.contact-form-advanced button:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 14px 36px rgba(13,169,79,0.35),
+        0 0 0 2px rgba(13,169,79,0.25);
+}
+
+/* Mobile Fix */
+@media (max-width: 900px) {
+    .form-row-advanced {
+        grid-template-columns: 1fr;
+    }
+    .contact-form-advanced {
+        padding: 40px 25px;
+    }
+}
+/* ================================
+   CONTACT – QUICK ACTION BUTTONS
+================================ */
+.contact-quick-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-btn {
+    padding: 14px 26px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s ease;
+    background: #fff;
+    border: 2px solid var(--green);
+    color: var(--green);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.contact-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.14);
+}
+
+/* Individual brand colors */
+.contact-btn.whatsapp {
+    border-color: #25D366;
+    color: #25D366;
+}
+
+.contact-btn.whatsapp:hover {
+    background: #25D366;
+    color: #fff;
+}
+
+.contact-btn.phone {
+    border-color: #000;
+    color: #000;
+}
+
+.contact-btn.phone:hover {
+    background: #000;
+    color: #fff;
+}
+
+.contact-btn.email {
+    border-color: #0072ff;
+    color: #0072ff;
+}
+
+.contact-btn.email:hover {
+    background: #0072ff;
+    color: #fff;
+}
+
+/* Icons sizing */
+.contact-btn i {
+    font-size: 1.2rem;
+}
