@@ -464,40 +464,7 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid var(--fo
 .contact {
     text-align: center;
 }
-/* MOBILE NAV MENU (HIDDEN BY DEFAULT) */
-.nav-links {
-    transition: max-height 0.3s ease;
-}
 
-@media (max-width: 800px) {
-    .nav-links {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background: var(--card-bg);
-        width: 100%;
-        flex-direction: column;
-        padding: 20px;
-        border-radius: 0 0 12px 12px;
-        box-shadow: var(--shadow);
-        max-height: 0;
-        overflow: hidden;
-    }
-
-    .nav-links.open {
-        max-height: 260px; /* adjust based on links */
-    }
-
-    .hamburger.open span:nth-child(1) {
-        transform: translateY(10px) rotate(45deg);
-    }
-    .hamburger.open span:nth-child(2) {
-        opacity: 0;
-    }
-    .hamburger.open span:nth-child(3) {
-        transform: translateY(-10px) rotate(-45deg);
-    }
-}
 .nav-links.open {
     right: 0;
 }
