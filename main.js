@@ -180,26 +180,26 @@
       MOBILE NAVIGATION TOGGLE  ← ADDED
   ============================================================ */
   function initMobileNav() {
-    const toggle = $('#menuToggle');
-    const nav = $('#navLinks');
+    const toggle = $('#hamburger');
+    const nav = $('#navMenu');
 
     if (!toggle || !nav) return;
 
     toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      toggle.classList.toggle('active');
-      document.body.classList.toggle('nav-open');
+        nav.classList.toggle('open');
+        toggle.classList.toggle('open');
+        document.body.classList.toggle('nav-open');
     });
 
-    // Close after clicking a link
-    $$('#navLinks a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('open');
-        toggle.classList.remove('active');
-        document.body.classList.remove('nav-open');
-      });
+    $$('#navMenu a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('open');
+            toggle.classList.remove('open');
+            document.body.classList.remove('nav-open');
+        });
     });
-  }
+}
+
 
   /* ============================================================
       INITIALIZE EVERYTHING
