@@ -465,14 +465,19 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid var(--fo
     text-align: center;
 }
 
-.nav-links.open {
-    right: 0;
-}
-/* MOBILE NAV OPEN STATE */
+./* ------------------------------
+   MOBILE NAV – FIXED + CLEANED
+-------------------------------- */
+
+/* Base mobile state: nav hidden */
 .nav-links {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
 }
 
+/* When menu opens */
 .nav-links.open {
     display: flex;
     position: absolute;
@@ -486,25 +491,8 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid var(--fo
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     z-index: 999;
 }
-@media (min-width: 850px) {
-  .nav-links {
-    display: flex !important;
-    position: static;
-    flex-direction: row;
-    background: none;
-    padding: 0;
-    box-shadow: none;
-  }
-}
-/* Make nav links stack on mobile and allow the toggle to show */
-.nav-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.4rem;
-}
 
-/* Style the toggle when it is inside the nav */
+/* Theme toggle inside the nav */
 .nav-links .theme-toggle {
     display: flex;
     align-items: center;
@@ -514,7 +502,31 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid var(--fo
     font-size: 1.4rem;
 }
 
-/* Make sure icons are visible */
 .nav-links .theme-toggle i {
     font-size: 1.6rem;
+}
+
+/* Desktop mode */
+@media (min-width: 850px) {
+    .nav-links {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: none;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .nav-links.open {
+        position: static;
+        display: flex;
+        box-shadow: none;
+        background: none;
+        padding: 0;
+    }
+
+    /* Theme toggle aligns properly on desktop */
+    .nav-links .theme-toggle {
+        margin-top: 0;
+    }
 }
