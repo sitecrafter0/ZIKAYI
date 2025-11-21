@@ -8,6 +8,7 @@
    ✔ Contact Button Pulse (auto stops)
    ✔ Toast System (modern)
    ✔ Global fade-in on load
+   ✔ Mobile Navigation Toggle  ← ADDED
 */
 
 (() => {
@@ -98,7 +99,8 @@
         const r = card.getBoundingClientRect();
         const dx = (e.clientX - r.left) / r.width - 0.5;
         const dy = (e.clientY - r.top) / r.height - 0.5;
-        card.style.transform = `perspective(1100px) rotateX(${dy * -10}deg) rotateY(${dx * 12}deg)`;
+        card.style.transform =
+          `perspective(1100px) rotateX(${dy * -10}deg) rotateY(${dx * 12}deg)`;
       });
       card.addEventListener('mouseleave', () => {
         card.style.transform = 'perspective(1100px) rotateX(0) rotateY(0)';
@@ -175,6 +177,31 @@
   }
 
   /* ============================================================
+      MOBILE NAVIGATION TOGGLE  ← ADDED
+  ============================================================ */
+  function initMobileNav() {
+    const toggle = $('#menuToggle');
+    const nav = $('#navLinks');
+
+    if (!toggle || !nav) return;
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      toggle.classList.toggle('active');
+      document.body.classList.toggle('nav-open');
+    });
+
+    // Close after clicking a link
+    $$('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.classList.remove('active');
+        document.body.classList.remove('nav-open');
+      });
+    });
+  }
+
+  /* ============================================================
       INITIALIZE EVERYTHING
   ============================================================ */
   function init() {
@@ -183,8 +210,8 @@
     initReveal();
     initPortfolio();
     initContactPulse();
+    initMobileNav(); // ← ADDED
 
-    // Fade page in
     setTimeout(() => document.body.classList.add('page-loaded'), 80);
   }
 
