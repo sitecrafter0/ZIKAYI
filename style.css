@@ -684,3 +684,107 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid var(--fo
     font-size: 1rem;
     border-radius: 10px;
 }
+/* ============================================================
+   FIXED RESPONSIVE NAV — B1 + W2 + V3 + H2
+   Floating dropdown (230px), aligned under hamburger
+============================================================ */
+.hamburger {
+    width: 32px;
+    height: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background: var(--text-color, #111);
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+/* Hamburger open animation */
+.hamburger.open span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Desktop keeps your existing layout */
+@media (min-width: 769px) {
+    #navMenu {
+        display: flex !important;
+        position: static !important;
+        background: none !important;
+        box-shadow: none !important;
+        width: auto !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* ======================
+   MOBILE NAV DROPDOWN
+====================== */
+@media (max-width: 768px) {
+
+    /* hide original nav */
+    #navMenu {
+        position: absolute;
+        top: 70px;               /* H2 */
+        right: 15px;             /* B1 floating on right */
+        width: 230px;            /* W2 */
+        background: var(--card-bg, #fff);
+        padding: 15px 18px;
+        border-radius: 16px;
+        box-shadow: 0 6px 28px rgba(0,0,0,0.16);
+
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: 0.28s ease;
+        z-index: 999;
+    }
+
+    /* open state */
+    #navMenu.open {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    /* mobile link styling — kept minimal so your colors stay intact */
+    #navMenu a {
+        padding: 10px 0;
+        font-size: 16px;
+        font-weight: 500;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    #navMenu a:last-child {
+        border-bottom: none;
+    }
+
+    /* ensure hamburger is visible */
+    .hamburger {
+        display: flex;
+        position: relative;
+        z-index: 9999;
+    }
+
+    /* hide desktop nav */
+    .nav-links {
+        display: none !important;
+    }
+}
