@@ -176,12 +176,12 @@
     setTimeout(() => toast.classList.remove('show'), ms);
   }
 
-  /* ============================================================
-      MOBILE NAVIGATION TOGGLE  ← ADDED
-  ============================================================ */
-  function initMobileNav() {
-    const toggle = $('#hamburger');
-    const nav = $('#navMenu');
+ /* ============================================================
+      MOBILE NAVIGATION TOGGLE — FIXED VANILLA JS VERSION
+============================================================ */
+function initMobileNav() {
+    const toggle = document.getElementById('hamburger');
+    const nav = document.getElementById('navMenu');
 
     if (!toggle || !nav) return;
 
@@ -191,7 +191,7 @@
         document.body.classList.toggle('nav-open');
     });
 
-    $$('#navMenu a').forEach(link => {
+    document.querySelectorAll('#navMenu a').forEach(link => {
         link.addEventListener('click', () => {
             nav.classList.remove('open');
             toggle.classList.remove('open');
@@ -199,6 +199,8 @@
         });
     });
 }
+
+initMobileNav(); // ← VERY IMPORTANT
 
 
   /* ============================================================
