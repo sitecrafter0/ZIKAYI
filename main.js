@@ -179,26 +179,7 @@
  /* ============================================================
       MOBILE NAVIGATION TOGGLE — FIXED VANILLA JS VERSION
 ============================================================ */
-function initMobileNav() {
-    const toggle = document.getElementById('hamburger');
-    const nav = document.getElementById('navMenu');
 
-    if (!toggle || !nav) return;
-
-    toggle.addEventListener('click', () => {
-        nav.classList.toggle('open');
-        toggle.classList.toggle('open');
-        document.body.classList.toggle('nav-open');
-    });
-
-    document.querySelectorAll('#navMenu a').forEach(link => {
-        link.addEventListener('click', () => {
-            nav.classList.remove('open');
-            toggle.classList.remove('open');
-            document.body.classList.remove('nav-open');
-        });
-    });
-}
 
 initMobileNav(); // ← VERY IMPORTANT
 
