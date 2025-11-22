@@ -522,3 +522,72 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid var(--fo
         margin-top: 0;
     }
 }
+.contact-form {
+    background: var(--card-bg, #fff);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.form-title {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group.full {
+    grid-column: span 2;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+    display: block;
+    color: var(--text-color, #222);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    background: #f9f9f9;
+    font-size: 0.95rem;
+    transition: 0.25s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #32cd32;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(50,205,50,0.15);
+}
+
+.form-group textarea {
+    height: 130px;
+    resize: none;
+}
+
+.form-btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    border-radius: 10px;
+}
