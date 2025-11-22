@@ -434,7 +434,8 @@ input:focus, textarea:focus, select:focus{ box-shadow: 0 8px 30px var(--focus); 
   .hero-content{ margin-left:4%; padding:22px; border-radius:12px; max-width:720px; }
 
   /* don't hide nav-links — we'll control visibility/position with the floating dropdown rules below */
-  
+  .nav-links{ /* keep space for desktop fallback; overridden in mobile block */ display:flex; }
+  .hamburger{ display:flex; }
   .feature-grid{ grid-template-columns: repeat(1,1fr); }
   .service-grid{ grid-template-columns: repeat(2,1fr); }
   .why-grid{ grid-template-columns: repeat(2,1fr); }
