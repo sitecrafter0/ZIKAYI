@@ -591,3 +591,86 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid var(--fo
     font-size: 1rem;
     border-radius: 10px;
 }
+/* ============================
+   MOBILE NAVIGATION
+============================ */
+@media (max-width: 768px) {
+
+    /* Container alignment */
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Hide desktop nav layout */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        background: #111;
+        display: flex;
+        flex-direction: column;
+        padding: 100px 30px;
+        gap: 25px;
+        transition: 0.4s ease;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.4);
+        z-index: 999;
+    }
+
+    /* When menu opens */
+    .nav-links.open {
+        right: 0;
+    }
+
+    /* Mobile nav links */
+    .nav-links a {
+        color: #fff;
+        font-size: 1.2rem;
+    }
+
+    /* HAMBURGER */
+    .hamburger {
+        width: 30px;
+        height: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .hamburger span {
+        width: 100%;
+        height: 3px;
+        background: #222;
+        transition: 0.4s;
+        border-radius: 3px;
+    }
+
+    /* HAMBURGER ANIMATION */
+    .hamburger.open span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Prevent background scrolling when menu is open */
+    body.nav-open {
+        overflow: hidden;
+    }
+
+    /* Theme toggle inside mobile menu */
+    .theme-toggle {
+        margin-top: 20px;
+        font-size: 1.5rem;
+    }
+}
