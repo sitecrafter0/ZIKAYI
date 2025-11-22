@@ -788,3 +788,32 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid var(--fo
         display: none !important;
     }
 }
+@media (max-width: 800px) {
+  /* Override the hide rule */
+  .nav-links {
+    display: flex !important;
+  }
+
+  /* Your floating dropdown open logic — adjust as needed */
+  .nav-links.open {
+    /* make sure position / visibility is right */
+    position: fixed;
+    top: calc(var(--header-height, 70px));
+    right: 12px;
+    width: 230px;
+    background: var(--card-bg);
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 14px 40px rgba(2,6,23,0.18);
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: transform 260ms ease, opacity 260ms ease;
+    z-index: 999;
+  }
+
+  body.nav-open {
+    overflow: hidden;
+  }
+}
